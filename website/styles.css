@@ -1,0 +1,99 @@
+body, html
+{
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 100%;
+}
+
+.footer
+{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 5px;
+  width: 100%;
+  color: #d1d1d1;
+  text-align: center;
+  font-size: 8pt;
+}
+
+a
+{
+    color: #d1d1d1;
+}
+
+.bd
+{
+    background-image: url(all.gif), url(loading.gif);
+    height: 100%;
+    background-position: bottom right, center;
+    background-repeat: no-repeat;
+    background-size: cover, 10%;
+}
+
+.bd40
+{
+    background-image: url(1940.gif), url(loading.gif);
+    height: 100%;
+    background-position: bottom right, center;
+    background-repeat: no-repeat;
+    background-size: cover, 10%;
+}
+
+
+.bd41
+{
+    background-image: url(1941.gif), url(loading.gif);
+    height: 100%;
+    background-position: bottom right, center;
+    background-repeat: no-repeat;
+    background-size: cover, 10%;
+}
+
+.bd42
+{
+    background-image: url(1942.gif), url(loading.gif);
+    height: 100%;
+    background-position: bottom right, center;
+    background-repeat: no-repeat;
+    background-size: cover, 10%;
+}
+
+.bd43
+{
+    background-image: url(1943.gif), url(loading.gif);
+    height: 100%;
+    background-position: bottom right, center;
+    background-repeat: no-repeat;
+    background-size: cover, 10%;
+}
+
+.bd44
+{
+    background-image: url(1944.gif), url(loading.gif);
+    height: 100%;
+    background-position: bottom right, center;
+    background-repeat: no-repeat;
+    background-size: cover, 10%;
+}
+
+.bd45
+{
+    background-image: url(1945.gif), url(loading.gif);
+    height: 100%;
+    background-position: bottom right, center;
+    background-repeat: no-repeat;
+    background-size: cover, 10%;
+}
+
+h1
+{
+    padding-top: 40px;
+}
+
+h1, h5
+{
+    color: white;
+    text-align: center;
+}
