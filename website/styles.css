@@ -4,6 +4,7 @@ body, html
     color: white;
     text-align: center;
     height: 100%;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 .footer
@@ -27,9 +28,9 @@ a
 {
     background-image: url(Know_Nothing_Image.jpeg);
     height: 100%;
-    background-position: bottom right, center;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover, 10%;
+    background-size: auto, 10%;
 }
 
 .bd40
