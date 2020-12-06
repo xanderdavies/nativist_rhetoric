@@ -7,6 +7,30 @@ body, html
     font-family: "Lucida Console", "Courier New", monospace;
 }
 
+a
+{
+    color: #d1d1d1;
+}
+
+h1
+{
+    padding-top: 40px;
+}
+
+h1, h5
+{
+    color: white;
+    text-align: center;
+}
+
+p
+{
+    color: white;
+    text-align: left;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
 .footer
 {
   position: fixed;
@@ -20,11 +44,6 @@ body, html
   font-size: 8pt;
 }
 
-a
-{
-    color: #d1d1d1;
-}
-
 .bd
 {
     background-image: url(Know_Nothing_Image.jpeg);
@@ -34,68 +53,7 @@ a
     background-size: auto, 10%;
 }
 
-.bd40
+.bd_back
 {
-    background-image: url(1940.gif), url(loading.gif);
-    height: 100%;
-    background-position: bottom right, center;
-    background-repeat: no-repeat;
-    background-size: cover, 10%;
-}
-
-
-.bd41
-{
-    background-image: url(1941.gif), url(loading.gif);
-    height: 100%;
-    background-position: bottom right, center;
-    background-repeat: no-repeat;
-    background-size: cover, 10%;
-}
-
-.bd42
-{
-    background-image: url(1942.gif), url(loading.gif);
-    height: 100%;
-    background-position: bottom right, center;
-    background-repeat: no-repeat;
-    background-size: cover, 10%;
-}
-
-.bd43
-{
-    background-image: url(1943.gif), url(loading.gif);
-    height: 100%;
-    background-position: bottom right, center;
-    background-repeat: no-repeat;
-    background-size: cover, 10%;
-}
-
-.bd44
-{
-    background-image: url(1944.gif), url(loading.gif);
-    height: 100%;
-    background-position: bottom right, center;
-    background-repeat: no-repeat;
-    background-size: cover, 10%;
-}
-
-.bd45
-{
-    background-image: url(1945.gif), url(loading.gif);
-    height: 100%;
-    background-position: bottom right, center;
-    background-repeat: no-repeat;
-    background-size: cover, 10%;
-}
-
-h1
-{
-    padding-top: 40px;
-}
-
-h1, h5
-{
-    color: white;
-    text-align: center;
+    background-color: black;
 }
