@@ -39,6 +39,21 @@ h4
     padding-top: 20px;
 }
 
+.big_image
+{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+  height: auto;
+
+
+}
+
+.inline-block {
+   display: inline-block;
+   max-width: 60%;
+}
+
 .cloud
 {
     margin-left: auto;
@@ -67,6 +82,17 @@ h4
   color: #d1d1d1;
   text-align: left;
   font-size: 8pt;
+}
+
+#twoim
+{
+  padding-bottom: 40px;
+}
+
+#cloud_header
+{
+  padding-top: 60px;
+  padding-bottom: 40px;
 }
 
 .bd
