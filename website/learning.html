@@ -4,7 +4,7 @@
     <head>
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
-        <title>Nativist Rhetoric: Learning</title>
+        <title>Nativist Rhetoric: Machine Learning</title>
         <!--The following three script files serve only one purpose: on mobile, the bootstrap navbar condesnes and
         provides the user with a button to open the menu. I need to import their script files for this to work.-->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -35,5 +35,192 @@
                 </li>
             </div>
         </nav>
+
+        <h1>Machine Learning & Sentence Classification</h1>
+
+        <p class="lead" style = "padding-top: 20px">We fine-tuned Google AI's BERT (Bidirectional Encoder Representations from Transformers) to classify nativist text.</p>
+
+        <p>After training, the model achieved over <b>95% accuracy</b> on the test dataset. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consectetur volutpat felis vitae pretium. Vestibulum nulla enim, ullamcorper a justo vel, ornare ultricies metus. Vestibulum volutpat, nisi at commodo malesuada, ante dui convallis nisi, a lacinia lacus lectus vitae ipsum. Quisque non nisi et turpis blandit vulputate ut sed mauris. Aliquam suscipit, lacus non hendrerit gravida, leo dui pulvinar est, in aliquam ligula urna tempor lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque quis fermentum erat. Duis molestie sollicitudin porta. Nunc a lacinia risus. Vivamus at sollicitudin enim, finibus volutpat nisl. Vestibulum elementum mi vel velit suscipit, nec varius eros blandit. Below is a selection of samples taken from the test data set.</p>
+
+        <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
+            <div class="col">
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="bad_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
+              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="bad_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
+              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="bad_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
+              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
+              <p class="good_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+            </div>
+            <div class="col">
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="bad_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
+              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
+              <p class="good_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
+              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="bad_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
+              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="bad_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+            </div>
+        </div>
+
+        <h2>Extension: Presidential Speeches</h2>
+
+        <p style = "padding-top: 20px">Express misgivings about applying outside of the sample space. Talk about why we decided to do one speech each, and why we wanted it immigration focused. Also, we should give total number nativist sentences also. Nullam iaculis, mi id tristique luctus, neque justo blandit ipsum, ut mattis massa nisi sit amet tellus. Maecenas dictum magna ex, et convallis elit tincidunt sit amet. Maecenas nec consectetur ex. Nulla finibus nibh dapibus felis fringilla auctor. Curabitur nec ligula fermentum, porta ante nec, vehicula velit. Maecenas vel nisl non libero auctor vehicula. Etiam congue lorem a iaculis fringilla. Vivamus vulputate sagittis purus sit amet ultrices. Mauris at laoreet turpis. Integer urna felis, euismod ac interdum at, blandit ornare odio. Sed ac congue turpis.</p>
+
+        <h3>Donald Trump</h3>
+        <p style = "padding-top: 20px">Nullam iaculis, mi id tristique luctus, neque justo blandit ipsum, ut mattis massa nisi sit amet tellus. Maecenas dictum magna ex, et convallis elit tincidunt sit amet. Maecenas nec consectetur ex. Nulla finibus nibh dapibus felis fringilla auctor. Curabitur nec ligula fermentum, porta ante nec, vehicula velit. Maecenas vel nisl non libero auctor vehicula. Etiam congue lorem a iaculis fringilla. Vivamus vulputate sagittis purus sit amet ultrices. Mauris at laoreet turpis. Integer urna felis, euismod ac interdum at, blandit ornare odio. Sed ac congue turpis.</p>
+
+        <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
+            <div class="col">
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="bad_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
+              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="good_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+            </div>
+            <div class="col">
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="good_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
+              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="bad_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+            </div>
+        </div>
+
+        <h3>Barack Obama</h3>
+        <p style = "padding-top: 20px">Nullam iaculis, mi id tristique luctus, neque justo blandit ipsum, ut mattis massa nisi sit amet tellus. Maecenas dictum magna ex, et convallis elit tincidunt sit amet. Maecenas nec consectetur ex. Nulla finibus nibh dapibus felis fringilla auctor. Curabitur nec ligula fermentum, porta ante nec, vehicula velit. Maecenas vel nisl non libero auctor vehicula. Etiam congue lorem a iaculis fringilla. Vivamus vulputate sagittis purus sit amet ultrices. Mauris at laoreet turpis. Integer urna felis, euismod ac interdum at, blandit ornare odio. Sed ac congue turpis.</p>
+
+        <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
+            <div class="col">
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="bad_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
+              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="good_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+            </div>
+            <div class="col">
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="good_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
+              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="bad_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+            </div>
+        </div>
+
+        <h3>George W. Bush</h3>
+        <p style = "padding-top: 20px">Nullam iaculis, mi id tristique luctus, neque justo blandit ipsum, ut mattis massa nisi sit amet tellus. Maecenas dictum magna ex, et convallis elit tincidunt sit amet. Maecenas nec consectetur ex. Nulla finibus nibh dapibus felis fringilla auctor. Curabitur nec ligula fermentum, porta ante nec, vehicula velit. Maecenas vel nisl non libero auctor vehicula. Etiam congue lorem a iaculis fringilla. Vivamus vulputate sagittis purus sit amet ultrices. Mauris at laoreet turpis. Integer urna felis, euismod ac interdum at, blandit ornare odio. Sed ac congue turpis.</p>
+
+        <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
+            <div class="col">
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="bad_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
+              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="good_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+            </div>
+            <div class="col">
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="good_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
+              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="bad_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+            </div>
+        </div>
+
+        <h3>Bill Clinton</h3>
+        <p style = "padding-top: 20px">Nullam iaculis, mi id tristique luctus, neque justo blandit ipsum, ut mattis massa nisi sit amet tellus. Maecenas dictum magna ex, et convallis elit tincidunt sit amet. Maecenas nec consectetur ex. Nulla finibus nibh dapibus felis fringilla auctor. Curabitur nec ligula fermentum, porta ante nec, vehicula velit. Maecenas vel nisl non libero auctor vehicula. Etiam congue lorem a iaculis fringilla. Vivamus vulputate sagittis purus sit amet ultrices. Mauris at laoreet turpis. Integer urna felis, euismod ac interdum at, blandit ornare odio. Sed ac congue turpis.</p>
+
+        <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
+            <div class="col">
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="bad_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
+              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="good_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+            </div>
+            <div class="col">
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="good_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
+              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="bad_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+            </div>
+        </div>
+
+        <h3>George H. W. Bush</h3>
+        <p style = "padding-top: 20px">Nullam iaculis, mi id tristique luctus, neque justo blandit ipsum, ut mattis massa nisi sit amet tellus. Maecenas dictum magna ex, et convallis elit tincidunt sit amet. Maecenas nec consectetur ex. Nulla finibus nibh dapibus felis fringilla auctor. Curabitur nec ligula fermentum, porta ante nec, vehicula velit. Maecenas vel nisl non libero auctor vehicula. Etiam congue lorem a iaculis fringilla. Vivamus vulputate sagittis purus sit amet ultrices. Mauris at laoreet turpis. Integer urna felis, euismod ac interdum at, blandit ornare odio. Sed ac congue turpis.</p>
+
+        <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
+            <div class="col">
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="bad_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
+              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="good_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+            </div>
+            <div class="col">
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="good_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
+              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="bad_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+            </div>
+        </div>
+
+        <h3>Ronald Reagan</h3>
+        <p style = "padding-top: 20px">Nullam iaculis, mi id tristique luctus, neque justo blandit ipsum, ut mattis massa nisi sit amet tellus. Maecenas dictum magna ex, et convallis elit tincidunt sit amet. Maecenas nec consectetur ex. Nulla finibus nibh dapibus felis fringilla auctor. Curabitur nec ligula fermentum, porta ante nec, vehicula velit. Maecenas vel nisl non libero auctor vehicula. Etiam congue lorem a iaculis fringilla. Vivamus vulputate sagittis purus sit amet ultrices. Mauris at laoreet turpis. Integer urna felis, euismod ac interdum at, blandit ornare odio. Sed ac congue turpis.</p>
+
+        <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
+            <div class="col">
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="bad_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
+              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="good_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+            </div>
+            <div class="col">
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="good_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
+              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="bad_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+            </div>
+        </div>
+
+        <h3>Jimmy Carter</h3>
+        <p style = "padding-top: 20px">Nullam iaculis, mi id tristique luctus, neque justo blandit ipsum, ut mattis massa nisi sit amet tellus. Maecenas dictum magna ex, et convallis elit tincidunt sit amet. Maecenas nec consectetur ex. Nulla finibus nibh dapibus felis fringilla auctor. Curabitur nec ligula fermentum, porta ante nec, vehicula velit. Maecenas vel nisl non libero auctor vehicula. Etiam congue lorem a iaculis fringilla. Vivamus vulputate sagittis purus sit amet ultrices. Mauris at laoreet turpis. Integer urna felis, euismod ac interdum at, blandit ornare odio. Sed ac congue turpis.</p>
+
+        <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
+            <div class="col">
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="bad_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
+              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="good_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+            </div>
+            <div class="col">
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="good_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
+              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
+              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
+              <p class="bad_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+            </div>
+        </div>
+
+        <h2>Conclusion</h2>
+        <p style = "padding-top: 20px">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus. Sed condimentum lacus facilisis, sagittis nisl eu, pretium ex. Aliquam cursus suscipit ligula, at dapibus magna. Ut semper urna nulla, efficitur commodo nisl venenatis non. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed elit magna, elementum vitae mauris sit amet, rhoncus semper nulla. Nulla et tempus quam, id bibendum leo. Vivamus rhoncus eros a lorem facilisis aliquet sed nec tellus.</p>
+
+        <p>Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus. Mauris ut tortor eget est lacinia elementum. Quisque interdum aliquet magna, id semper ligula pulvinar vitae. Nulla elementum varius volutpat. Donec lacinia, nibh a hendrerit tincidunt, dui urna euismod metus, eu scelerisque augue ante vitae lorem. Suspendisse mollis maximus semper. Donec eu lectus mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer sed ex et erat euismod feugiat ac in ante. Donec ullamcorper elementum dolor, at sodales justo hendrerit a. Praesent sagittis, diam eu congue dictum, dui velit pretium orci, eget porttitor neque mauris id nisi. Sed in consectetur leo. Pellentesque eget ultrices metus, in venenatis quam. Quisque ullamcorper sem eget nisl venenatis cursus. Morbi mi orci, pharetra a nisi maximus, pellentesque pretium nulla.</p>
+
+        <p>Pellentesque nunc magna, varius a consequat tempor, interdum nec ante. Vivamus at nulla a nisi elementum dignissim id nec orci. Ut vitae placerat neque. Integer urna tortor, aliquet pretium hendrerit vitae, mollis at justo. Aliquam sollicitudin, velit a viverra auctor, erat augue dapibus urna, vel convallis erat risus eget risus. Sed tincidunt turpis sapien, congue elementum mi placerat sit amet. In hac habitasse platea dictumst.</p>
+
     </body>
 </html>
