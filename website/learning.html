@@ -2,6 +2,7 @@
 
 <html lang="en">
     <head>
+        <meta charset="utf-8">
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
         <title>Nativist Rhetoric: Machine Learning</title>
@@ -40,7 +41,7 @@
 
         <p class="lead" style = "padding-top: 20px">We fine-tuned Google AI's BERT (Bidirectional Encoder Representations from Transformers) to classify nativist text.</p>
 
-        <p>After training, the model achieved over <b>95% accuracy</b> (0.9415 MCC) on the test dataset. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consectetur volutpat felis vitae pretium. Vestibulum nulla enim, ullamcorper a justo vel, ornare ultricies metus. Vestibulum volutpat, nisi at commodo malesuada, ante dui convallis nisi, a lacinia lacus lectus vitae ipsum. Quisque non nisi et turpis blandit vulputate ut sed mauris. Aliquam suscipit, lacus non hendrerit gravida, leo dui pulvinar est, in aliquam ligula urna tempor lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque quis fermentum erat. Duis molestie sollicitudin porta. Nunc a lacinia risus. Vivamus at sollicitudin enim, finibus volutpat nisl. Vestibulum elementum mi vel velit suscipit, nec varius eros blandit. Below is a selection of samples taken from the test data set, all accurate predictions by the model.</p>
+        <p>We trained the model to recognize nativist rhetoric using our database of nineteenth-century sentences (see the “Database” tab for an in-depth look at our source materials). After training, the model achieved over <b>95% accuracy</b> (0.9415 MCC) on the test dataset. (We initially marked a quarter of the dataset as our test set and did not use it during training.) Below is a selection of samples taken from the test data set of nineteenth-century speech and writing, all accurate predictions by the model. Nativist sentences are rendered in red typeface, non-nativist sentences in green.</p>
 
         <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
             <div class="col">
@@ -73,154 +74,134 @@
 
         <h2>Extension: Presidential Speeches</h2>
 
-        <p style = "padding-top: 20px">Express misgivings about applying outside of the sample space. Talk about why we decided to do one speech each, and why we wanted it immigration focused. Also, we should give total number nativist sentences also. Nullam iaculis, mi id tristique luctus, neque justo blandit ipsum, ut mattis massa nisi sit amet tellus. Maecenas dictum magna ex, et convallis elit tincidunt sit amet. Maecenas nec consectetur ex. Nulla finibus nibh dapibus felis fringilla auctor. Curabitur nec ligula fermentum, porta ante nec, vehicula velit. Maecenas vel nisl non libero auctor vehicula. Etiam congue lorem a iaculis fringilla. Vivamus vulputate sagittis purus sit amet ultrices. Mauris at laoreet turpis. Integer urna felis, euismod ac interdum at, blandit ornare odio. Sed ac congue turpis.</p>
+        <p style = "padding-top: 20px">As mentioned, our model is excellent at recognizing nativism in our nineteenth-century database. We should, however, note a few reservations about applying the model outside of its training domain (i.e. a different century). As mentioned, using a few small speeches with modern diction did help, but the model still performs worse outside of its training space. For one, the model slightly overcounts nativist sentences in twenty-first-century pieces because it tends to flag any reference to immigration as nativist—in other words, it occasionally has trouble telling the difference between positive and negative references to immigration. It is worth noting that this over-counting is preferable to under-counting when paired with a human observer. Fixing this would require a considerably larger database of sentences, specifically more pro-immigration data-points, which would enable a more accurate model. Furthermore, we initially planned to assign a nativist score to each political figure under study, but we ultimately felt that sort of analysis would be crude and unreliable due to the wildly varying availability of immigration-related texts per president. Additionally, tabulating a ratio of nativist sentences to non-nativist sentences seems rather unhelpful since speeches tend to vary in how exclusively they focus on immigration; for example, a 100-sentence speech with ten nativist sentences is not necessarily more nativist than a 200-sentence speech with the same number of nativist sentences. Instead, we felt the model’s purpose was better served picking out individual nativist sentences for further analysis.</p>
+        <p>Putting aside these limitations, the model performs quite well at recognizing and flagging nativism in present-day speeches, providing an excellent tool for analyzing nativism in modern political discourse. To showcase the model’s capabilities, we applied it to speeches from every American president from Jimmy Carter to Donald Trump. We picked a single immigration-related speech from each president in order to better showcase the model’s capabilities as an investigative tool. The following is a discussion of our findings for each individual president in our study. Like the above examples from the test data set, example sentences from each president are rendered in red if nativist and green if non-nativist. Each set includes example sentences marked with an asterisk that the model incorrectly labeled. (Incorrect sentences are rendered in the color corresponding to the nativism value that the model assigned them.)</p>
 
         <h3>Donald Trump</h3>
-        <p style = "padding-top: 20px">Nullam iaculis, mi id tristique luctus, neque justo blandit ipsum, ut mattis massa nisi sit amet tellus. Maecenas dictum magna ex, et convallis elit tincidunt sit amet. Maecenas nec consectetur ex. Nulla finibus nibh dapibus felis fringilla auctor. Curabitur nec ligula fermentum, porta ante nec, vehicula velit. Maecenas vel nisl non libero auctor vehicula. Etiam congue lorem a iaculis fringilla. Vivamus vulputate sagittis purus sit amet ultrices. Mauris at laoreet turpis. Integer urna felis, euismod ac interdum at, blandit ornare odio. Sed ac congue turpis.</p>
+        <p style = "padding-top: 20px">The following are example sentences from President Trump’s Oval Office address advocating for more funding for his border wall, delivered on January 8, 2019. Trump tended to have considerable “noise” in his results since the model tended to mark his sentences nativist when he expressed anger or disapproval, even if not in a nativist way (see falsely labeled red sentence marked with *).</p>
+        <p>Based on the model’s findings, Trump’s nativist rhetoric tends to equate Central American undocumented immigrants with the drug epidemic in the United States. He also suggests that illegal immigration is connected with rising crime in the United States. He presented an additional argument that undocumented immigration unduly strains public resources and hurts the labor market, a thread connecting him to the Chinese exclusion debates of the 1890s.</p>
 
         <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
             <div class="col">
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="bad_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
-              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="good_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+              <p class="bad_sentence">Our southern border is a pipeline for vast quantities of illegal drugs including meth, heroin, cocaine, and fentanyl.</p>
+              <p class="bad_sentence">My administration has presented Congress with a detailed proposal to secure the border and stop the criminal gangs, drug smugglers, and human traffickers.</p>
+              <p class="good_sentence">The federal government remains shut down for one reason, and one reason only, because Democrats will not fund border security.</p>
+              <p class="good_sentence">This is the cycle of human suffering that I am determined to end.</p>
+              <p class="bad_sentence">*The only thing that is immoral is the politicians to do nothing and continue to allow more innocent people to be so horribly victimized.</p>
             </div>
             <div class="col">
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="good_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
-              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="bad_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+              <p class="bad_sentence">In the last two years, ICE officers made 266,000 arrests of aliens with criminal records including those charged or convicted of 100,000 assaults, 30,000 sex crimes, and 4,000 violent killings.</p>
+              <p class="bad_sentence">Ninety percent of [heroin]  floods across from our southern border.</p>
+              <p class="good_sentence">My fellow Americans, tonight I’m speaking to you because there is a growing humanitarian and security crisis at our southern border.</p>
+              <p class="bad_sentence">These [migrant] children are used as human pawns by vicious coyotes and ruthless gangs.</p>
+              <p class="good_sentence">*It strains public resources and drives down jobs and wages.</p>
             </div>
         </div>
 
         <h3>Barack Obama</h3>
-        <p style = "padding-top: 20px">Nullam iaculis, mi id tristique luctus, neque justo blandit ipsum, ut mattis massa nisi sit amet tellus. Maecenas dictum magna ex, et convallis elit tincidunt sit amet. Maecenas nec consectetur ex. Nulla finibus nibh dapibus felis fringilla auctor. Curabitur nec ligula fermentum, porta ante nec, vehicula velit. Maecenas vel nisl non libero auctor vehicula. Etiam congue lorem a iaculis fringilla. Vivamus vulputate sagittis purus sit amet ultrices. Mauris at laoreet turpis. Integer urna felis, euismod ac interdum at, blandit ornare odio. Sed ac congue turpis.</p>
+        <p style = "padding-top: 20px">The following are example sentences from President Obama’s remarks on immigration from Las Vegas, delivered on January 29, 2013. Most of the sentences that the model labeled nativist do in fact seem so in isolation, but in context the sentence is decidedly not nativist; for example, Obama notes a need “to deal with” the undocumented immigrants in the United States, but then goes on to clarify that there should be a path to citizenship for these immigrants. In this case, the model is working as it should, though this phenomenon makes it seem as though Obama’s speech contains more nativist sentences than it actually does.</p>
 
         <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
             <div class="col">
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="bad_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
-              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="good_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+              <p class="good_sentence">I’m here today because the time has come for common-sense, comprehensive immigration reform.</p>
+              <p class="good_sentence">So that’s what comprehensive immigration reform looks like -- smarter enforcement, a pathway to earn citizenship, improvements in the legal immigration system so that we continue to be a magnet for the best and the brightest all around the world.</p>
+              <p class="bad_sentence">Second, we have to deal with the 11 million individuals who are here illegally.</p>
+              <p class="good_sentence">I’m here because business leaders, faith leaders, labor leaders, law enforcement and leaders from both parties are coming together to say now is the time to find a better way to welcome the striving, hopeful immigrants who still see America as the land of opportunity.</p>
             </div>
             <div class="col">
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="good_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
-              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="bad_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+              <p class="good_sentence">For example, if you are a citizen, you shouldn’t have to wait years before your family is able to join you in America.</p>
+              <p class="bad_sentence">So he didn’t — he didn’t immigrate anywhere.</p>
+              <p class="bad_sentence">*But for comprehensive immigration reform to work, it must be clear from the outset that there is a pathway to citizenship.</p>
+              <p class="bad_sentence">*The Irish, who left behind a land of famine; the Germans, who fled persecution; the Scandinavians, who arrived eager to pioneer out west; the Polish; the Russians; the Italians; the Chinese; the Japanese; the West Indians; the huddled masses who came through Ellis Island on one coast and Angel Island on the other --  -- you know, all those folks, before they were us, they were them.</p>
             </div>
         </div>
 
         <h3>George W. Bush</h3>
-        <p style = "padding-top: 20px">Nullam iaculis, mi id tristique luctus, neque justo blandit ipsum, ut mattis massa nisi sit amet tellus. Maecenas dictum magna ex, et convallis elit tincidunt sit amet. Maecenas nec consectetur ex. Nulla finibus nibh dapibus felis fringilla auctor. Curabitur nec ligula fermentum, porta ante nec, vehicula velit. Maecenas vel nisl non libero auctor vehicula. Etiam congue lorem a iaculis fringilla. Vivamus vulputate sagittis purus sit amet ultrices. Mauris at laoreet turpis. Integer urna felis, euismod ac interdum at, blandit ornare odio. Sed ac congue turpis.</p>
+        <p style = "padding-top: 20px">The following are example sentences from President Bush’s address on immigration from the Oval Office, delivered on May 15, 2006. The noise in the model’s analysis of Bush’s speech likely exists because of words like “targeted” and “criminal” throwing off its ability to detect nativist rhetoric. Still, a few key points stick out, including the adverse effects of illegal immigration on public resources and job markets. It is important to note, however, that unlike Trump in the speech above, Bush takes care to avoid equating all illegal immigrants with crime and terrorism.</p>
 
         <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
             <div class="col">
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="bad_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
-              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="good_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+              <p class="bad_sentence">Illegal immigration puts pressure on public schools and hospitals, ... it strains state and local budgets ... and brings crime to our communities.</p>
+              <p class="good_sentence">Mexico is our neighbor, and our friend.</p>
+              <p class="bad_sentence">It would ease the financial burden on state and local governments, by replacing illegal workers with lawful taxpayers.</p>
+              <p class="good_sentence">America has the best technology in the world and we will ensure that the Border Patrol has the technology they need to do their job and secure our border.</p>
             </div>
             <div class="col">
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="good_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
-              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="bad_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+              <p class="good_sentence">The reality is that there are many people on the other side of our border who will do anything to come to America to work and build a better life.</p>
+              <p class="bad_sentence">Many use forged documents to get jobs, and that makes it difficult for employers to verify that the workers they hire are legal.</p>
+              <p class="bad_sentence">*So we will increase federal funding for state and local authorities assisting the Border Patrol on targeted enforcement missions.</p>
+              <p class="bad_sentence">*Every worker who applies for the program would be required to pass criminal background checks.</p>
             </div>
         </div>
 
         <h3>Bill Clinton</h3>
-        <p style = "padding-top: 20px">Nullam iaculis, mi id tristique luctus, neque justo blandit ipsum, ut mattis massa nisi sit amet tellus. Maecenas dictum magna ex, et convallis elit tincidunt sit amet. Maecenas nec consectetur ex. Nulla finibus nibh dapibus felis fringilla auctor. Curabitur nec ligula fermentum, porta ante nec, vehicula velit. Maecenas vel nisl non libero auctor vehicula. Etiam congue lorem a iaculis fringilla. Vivamus vulputate sagittis purus sit amet ultrices. Mauris at laoreet turpis. Integer urna felis, euismod ac interdum at, blandit ornare odio. Sed ac congue turpis.</p>
+        <p style = "padding-top: 20px">The following are example sentences from President Clinton’s 1995 State of the Union address. The nativist-labeled sentences indicate Clinton’s tough-on-crime stance and his equation of immigrants with forces driving up the national crime rate (“We are a nation of immigrants. But we are also a nation of laws.”) Predictably, then, much of his rhetoric seems aggressive and militant. He also makes references to the burden that undocumented immigrants place on social services.</p>
+        <p>It is important to note that the sentences are drawn from a State of the Union, so there is less material to analyze than other presidential speeches that focus solely on immigration. (Limited to online resources, we were unable to find such a speech for Clinton.)</p>
 
         <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
             <div class="col">
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="bad_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
-              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="good_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+              <p class="bad_sentence">That's why our administration has moved aggressively to secure our borders more by hiring a record number of new border guards, by deporting twice as many criminal aliens as ever before, by cracking down on illegal hiring, by barring welfare benefits to illegal aliens.</p>
+              <p class="bad_sentence">The public service they use impose burdens on our taxpayers.</p>
+              <p class="bad_sentence">The jobs they hold might otherwise be held by citizens or legal immigrants.</p>
             </div>
             <div class="col">
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="good_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
-              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="bad_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+              <p class="good_sentence">We are a nation of immigrants.</p>
+              <p class="bad_sentence">It is wrong and ultimately self-defeating for a nation of immigrants to permit the kind of abuse of our immigration laws we have seen in recent years, and we must do more to stop it.</p>
+              <p class="bad_sentence">*I hope very much that as we debate these specific and exciting matters, we can go beyond the sterile discussion between the illusion that there is somehow a program for every problem on the one hand, and the other illusion that the government is a source of every problem we have.</p>
             </div>
         </div>
 
         <h3>George H. W. Bush</h3>
-        <p style = "padding-top: 20px">Nullam iaculis, mi id tristique luctus, neque justo blandit ipsum, ut mattis massa nisi sit amet tellus. Maecenas dictum magna ex, et convallis elit tincidunt sit amet. Maecenas nec consectetur ex. Nulla finibus nibh dapibus felis fringilla auctor. Curabitur nec ligula fermentum, porta ante nec, vehicula velit. Maecenas vel nisl non libero auctor vehicula. Etiam congue lorem a iaculis fringilla. Vivamus vulputate sagittis purus sit amet ultrices. Mauris at laoreet turpis. Integer urna felis, euismod ac interdum at, blandit ornare odio. Sed ac congue turpis.</p>
+        <p style = "padding-top: 20px">The following are example sentences from President Bush’s “Statement on Signing the Immigration Act of 1990,” released on November 29, 1990. Bush separates undocumented immigrants in general from violent criminals, though he connects undocumented immigration with rising drug abuse. Most of his statement deals with opening avenues for legal immigration; the model mistakenly labeled some of these sentences as nativist.</p>
 
         <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
             <div class="col">
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="bad_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
-              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="good_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+              <p class="bad_sentence">In addition, S. 358 improves this Administration's ability to secure the U.S. border — the front lines of the war on drugs — by clarifying the authority of Immigration and Naturalization Service enforcement officers to make arrests and carry firearms.</p>
+              <p class="bad_sentence">*S. 358 accomplishes what this Administration sought from the outset of the immigration reform process: a complementary blending of our tradition of family reunification with increased immigration of skilled individuals to meet our economic needs.</p>
             </div>
             <div class="col">
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="good_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
-              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="bad_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+              <p class="bad_sentence">Specifically, it provides for the expeditious deportation of aliens who, by their violent criminal acts, forfeit their right to remain in this country.</p>
+              <p class="good_sentence">Other provisions of S. 358 will promote the initiation of new business in rural areas and the investment of foreign capital in our economy.</p>
+              <p class="bad_sentence">*These revised grounds lift unnecessary restrictions on those who may enter the United States.</p>
             </div>
         </div>
 
         <h3>Ronald Reagan</h3>
-        <p style = "padding-top: 20px">Nullam iaculis, mi id tristique luctus, neque justo blandit ipsum, ut mattis massa nisi sit amet tellus. Maecenas dictum magna ex, et convallis elit tincidunt sit amet. Maecenas nec consectetur ex. Nulla finibus nibh dapibus felis fringilla auctor. Curabitur nec ligula fermentum, porta ante nec, vehicula velit. Maecenas vel nisl non libero auctor vehicula. Etiam congue lorem a iaculis fringilla. Vivamus vulputate sagittis purus sit amet ultrices. Mauris at laoreet turpis. Integer urna felis, euismod ac interdum at, blandit ornare odio. Sed ac congue turpis.</p>
+        <p style = "padding-top: 20px">The following are example sentences from President Reagan’s “Statement on United States Immigration and Refugee Policy,” released on July 30, 1981. Here, Reagan speaks about immigration in largely positive terms, frequently evoking the ideal of America as a nation of immigrants and noting that even undocumented immigrants play an integral role in society. The model picked up even less nativist content than it did in George H. W. Bush’s statement. Even the sentences that it did label as nativist are rather mild or even only debatably nativist—this is sporadically true for the presidents above but is especially apparent for Reagan.</p>
 
         <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
             <div class="col">
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="bad_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
-              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="good_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+              <p class="bad_sentence">We shall seek new ways to integrate refugees into our society without nurturing their dependence on welfare.</p>
+              <p class="good_sentence">More than any other country, our strength comes from our own immigrant heritage and our capacity to welcome those from other lands.</p>
+              <p class="bad_sentence">At the same time, in so doing, we must not encourage illegal immigration.</p>
             </div>
             <div class="col">
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="good_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
-              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="bad_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
+              <p class="good_sentence">Our nation is a nation of immigrants.</p>
+              <p class="bad_sentence">These principles are designed to preserve our tradition of accepting foreigners to our shores, but to accept them in a controlled and orderly fashion.</p>
+              <p class="bad_sentence">*Illegal immigrants in considerable numbers have become productive members of our society and are a basic part of our work force.</p>
             </div>
         </div>
 
         <h3>Jimmy Carter</h3>
-        <p style = "padding-top: 20px">Nullam iaculis, mi id tristique luctus, neque justo blandit ipsum, ut mattis massa nisi sit amet tellus. Maecenas dictum magna ex, et convallis elit tincidunt sit amet. Maecenas nec consectetur ex. Nulla finibus nibh dapibus felis fringilla auctor. Curabitur nec ligula fermentum, porta ante nec, vehicula velit. Maecenas vel nisl non libero auctor vehicula. Etiam congue lorem a iaculis fringilla. Vivamus vulputate sagittis purus sit amet ultrices. Mauris at laoreet turpis. Integer urna felis, euismod ac interdum at, blandit ornare odio. Sed ac congue turpis.</p>
+        <p style = "padding-top: 20px">The following are example sentences from President Carter’s “Undocumented Aliens Message To The Congress,” released on August 4, 1977. Carter’s results have a substantial amount of noise; for instance, one of the falsely labeled sentences shown below includes the phrase “control the employment of undocumented aliens,” which may have influenced the model’s prediction that the sentence is nativist, even though the sentence as a whole denounces racial discrimination. Because of noise like this, conclusions on Carter’s immigration rhetoric are a bit unclear, though we see a desire to impose law and order and prevent immigrant strain on social services.</p>
 
         <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
-            <div class="col">
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="bad_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
-              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="good_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
-            </div>
-            <div class="col">
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="good_sentence">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus.</p>
-              <p class="good_sentence">Integer sed ex et erat euismod feugiat ac in ante.</p>
-              <p class="bad_sentence">Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus.</p>
-              <p class="bad_sentence">onec ullamcorper elementum dolor, at sodales justo hendrerit a.</p>
-            </div>
+          <div class="col">
+            <p class="bad_sentence">Measures must also be taken to significantly increase existing border enforcement efforts.</p>
+            <p class="bad_sentence">These aliens entered the U.S. illegally and have willfully remained here in violation of the immigration laws.</p>
+            <p class="good_sentence">[My administration’s actions will] [a]djust the immigration status of undocumented aliens who have resided in the U.S. continuously from before January 1, 1970 to the present and who apply with the Immigration and Naturalization Service (INS) for permanent resident alien status; create a new immigration category of temporary resident alien for undocumented aliens who have resided in the U.S. continuously prior to January 1, 1977; make no status change and enforce the immigration law against those undocumented aliens entering the U.S. after January 1, 1977.</p>
+          </div>
+          <div class="col">
+            <p class="bad_sentence">They have breached our nation's immigration laws, displaced many American citizens from jobs, and placed an increased financial burden on many states and local governments.</p>
+            <p class="bad_sentence">However, as long as jobs are available here but not easily available in countries which have been the source of most undocumented aliens, many citizens of those countries will ignore whatever barriers to entry and employment we erect.</p>
+            <p class="bad_sentence">*While I believe that both the new and existing employer sanctions, and their strict enforcement, are required to control the employment of undocumented aliens, the possibility that these sanctions might lead employers to discriminate against Mexican-American citizens and legal residents, as well as other ethnic Americans, would be intolerable.</p>
+          </div>
         </div>
 
         <h2>Conclusion</h2>
-        <p style = "padding-top: 20px">Nam euismod urna sed sapien egestas, id sollicitudin mi finibus. Sed condimentum lacus facilisis, sagittis nisl eu, pretium ex. Aliquam cursus suscipit ligula, at dapibus magna. Ut semper urna nulla, efficitur commodo nisl venenatis non. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed elit magna, elementum vitae mauris sit amet, rhoncus semper nulla. Nulla et tempus quam, id bibendum leo. Vivamus rhoncus eros a lorem facilisis aliquet sed nec tellus.</p>
+        <p style = "padding-top: 20px">The model’s ability to recognize threads of nineteenth-century nativism in modern political discourse, though imperfect, provides a very useful tool for rhetorical analysis. By applying our model to individual speeches, one can quickly observe key characteristics of the text under examination. Our model, largely trained on nineteenth-century nativist rhetoric, was indeed able to pick up traces of this type of nativism in modern-day political discourse.</p>
 
-        <p>Proin odio nunc, bibendum sit amet libero id, efficitur fermentum lacus. Mauris ut tortor eget est lacinia elementum. Quisque interdum aliquet magna, id semper ligula pulvinar vitae. Nulla elementum varius volutpat. Donec lacinia, nibh a hendrerit tincidunt, dui urna euismod metus, eu scelerisque augue ante vitae lorem. Suspendisse mollis maximus semper. Donec eu lectus mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer sed ex et erat euismod feugiat ac in ante. Donec ullamcorper elementum dolor, at sodales justo hendrerit a. Praesent sagittis, diam eu congue dictum, dui velit pretium orci, eget porttitor neque mauris id nisi. Sed in consectetur leo. Pellentesque eget ultrices metus, in venenatis quam. Quisque ullamcorper sem eget nisl venenatis cursus. Morbi mi orci, pharetra a nisi maximus, pellentesque pretium nulla.</p>
-
-        <p>Pellentesque nunc magna, varius a consequat tempor, interdum nec ante. Vivamus at nulla a nisi elementum dignissim id nec orci. Ut vitae placerat neque. Integer urna tortor, aliquet pretium hendrerit vitae, mollis at justo. Aliquam sollicitudin, velit a viverra auctor, erat augue dapibus urna, vel convallis erat risus eget risus. Sed tincidunt turpis sapien, congue elementum mi placerat sit amet. In hac habitasse platea dictumst.</p>
+        <p>Based on the accuracy of the model’s predictions for each president, the model’s accuracy seems to deteriorate slightly as we move back in time across presidents. The model was more successful with Bill Clinton and presidents following him than those who came before. This is likely because we used short speeches from Trump and Obama to familiarize the middle with modern syntax. Future iterations of this project could supplement the training data with short modern political speeches that cover a larger timespan rather than only the last two presidents. With more data, we are fairly confident the model would become a fairly accurate tool, with possible extensions for researchers as well as content regulators. Please contact <i style="color: #D3D3D3;">alexander_davies@college.harvard.edu</i> or <i style="color: #D3D3D3;">carsonkurad@college.harvard.edu</i> for access to the database. Further areas of study could also include investigations into specific markers of nativism, as well as how these have evolved over time.</p>
 
     </body>
 </html>
