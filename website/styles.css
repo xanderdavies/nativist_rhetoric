@@ -28,8 +28,9 @@ p
 {
     color: white;
     text-align: left;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: large;
 }
 
 h4
@@ -47,11 +48,13 @@ h4
 
 .bad_sentence
 {
+    font-size: medium;
     color: red;
 }
 
 .good_sentence
 {
+    font-size: medium;
     color: green;
 }
 
@@ -129,4 +132,31 @@ h2
 .bd_back
 {
     background-color: black;
+}
+
+.footnote
+{
+    font-size: small;
+    margin: 3px;
+    color: gray;
+}
+
+.text_image
+{
+   width: 20%;
+}
+
+.r
+{
+    margin-right: 20%
+}
+
+.l
+{
+    margin-left: 20%
+}
+
+a
+{
+    color: gray;
 }
