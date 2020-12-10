@@ -41,7 +41,7 @@
 
         <p class="lead" style = "padding-top: 20px">We fine-tuned Google AI's BERT (Bidirectional Encoder Representations from Transformers) to classify nativist text.</p>
 
-        <p>We trained the model to recognize nativist rhetoric using our database of nineteenth-century sentences (see the “Database” tab for an in-depth look at our source materials). After training, the model achieved over <b>95% accuracy</b> (0.9415 MCC) on the test dataset. (We initially marked a quarter of the dataset as our test set and did not use it during training.) Below is a selection of samples taken from the test data set of nineteenth-century speech and writing, all accurate predictions by the model. Nativist sentences are rendered in red typeface, non-nativist sentences in green.</p>
+        <p>We trained the model to recognize nativist rhetoric using our database of nineteenth-century sentences (see the "Database" tab for an in-depth look at our source materials). After training, the model achieved over <b>95% accuracy</b> (0.9415 MCC) on the test dataset. (We initially marked a quarter of the dataset as our test set and did not use it during training.) Below is a selection of samples taken from the test data set of nineteenth-century speech and writing, all accurate predictions by the model. Nativist sentences are rendered in red typeface, non-nativist sentences in green.</p>
 
         <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
             <div class="col">
@@ -78,7 +78,7 @@
         <p>Putting aside these limitations, the model performs quite well at recognizing and flagging nativism in present-day speeches, providing an excellent tool for analyzing nativism in modern political discourse. To showcase the model’s capabilities, we applied it to speeches from every American president from Jimmy Carter to Donald Trump. We picked a single immigration-related speech from each president in order to better showcase the model’s capabilities as an investigative tool. The following is a discussion of our findings for each individual president in our study. Like the above examples from the test data set, example sentences from each president are rendered in red if nativist and green if non-nativist. Each set includes example sentences marked with an asterisk that the model incorrectly labeled. (Incorrect sentences are rendered in the color corresponding to the nativism value that the model assigned them.)</p>
 
         <h3>Donald Trump</h3>
-        <p style = "padding-top: 20px">The following are example sentences from President Trump’s Oval Office address advocating for more funding for his border wall, delivered on January 8, 2019. Trump tended to have considerable “noise” in his results since the model tended to mark his sentences nativist when he expressed anger or disapproval, even if not in a nativist way (see falsely labeled red sentence marked with *).</p>
+        <p style = "padding-top: 20px">The following are example sentences from President Trump’s Oval Office address advocating for more funding for his border wall, delivered on January 8, 2019. Trump tended to have considerable "noise" in his results since the model tended to mark his sentences nativist when he expressed anger or disapproval, even if not in a nativist way (see falsely labeled red sentence marked with *).</p>
         <p>Based on the model’s findings, Trump’s nativist rhetoric tends to equate Central American undocumented immigrants with the drug epidemic in the United States. He also suggests that illegal immigration is connected with rising crime in the United States. He presented an additional argument that undocumented immigration unduly strains public resources and hurts the labor market, a thread connecting him to the Chinese exclusion debates of the 1890s.</p>
 
         <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
@@ -99,7 +99,7 @@
         </div>
 
         <h3>Barack Obama</h3>
-        <p style = "padding-top: 20px">The following are example sentences from President Obama’s remarks on immigration from Las Vegas, delivered on January 29, 2013. Most of the sentences that the model labeled nativist do in fact seem so in isolation, but in context the sentence is decidedly not nativist; for example, Obama notes a need “to deal with” the undocumented immigrants in the United States, but then goes on to clarify that there should be a path to citizenship for these immigrants. In this case, the model is working as it should, though this phenomenon makes it seem as though Obama’s speech contains more nativist sentences than it actually does.</p>
+        <p style = "padding-top: 20px">The following are example sentences from President Obama’s remarks on immigration from Las Vegas, delivered on January 29, 2013. Most of the sentences that the model labeled nativist do in fact seem so in isolation, but in context the sentence is decidedly not nativist; for example, Obama notes a need "to deal with" the undocumented immigrants in the United States, but then goes on to clarify that there should be a path to citizenship for these immigrants. In this case, the model is working as it should, though this phenomenon makes it seem as though Obama’s speech contains more nativist sentences than it actually does.</p>
 
         <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
             <div class="col">
@@ -117,7 +117,7 @@
         </div>
 
         <h3>George W. Bush</h3>
-        <p style = "padding-top: 20px">The following are example sentences from President Bush’s address on immigration from the Oval Office, delivered on May 15, 2006. The noise in the model’s analysis of Bush’s speech likely exists because of words like “targeted” and “criminal” throwing off its ability to detect nativist rhetoric. Still, a few key points stick out, including the adverse effects of illegal immigration on public resources and job markets. It is important to note, however, that unlike Trump in the speech above, Bush takes care to avoid equating all illegal immigrants with crime and terrorism.</p>
+        <p style = "padding-top: 20px">The following are example sentences from President Bush’s address on immigration from the Oval Office, delivered on May 15, 2006. The noise in the model’s analysis of Bush’s speech likely exists because of words like "targeted" and "criminal" throwing off its ability to detect nativist rhetoric. Still, a few key points stick out, including the adverse effects of illegal immigration on public resources and job markets. It is important to note, however, that unlike Trump in the speech above, Bush takes care to avoid equating all illegal immigrants with crime and terrorism.</p>
 
         <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
             <div class="col">
@@ -135,7 +135,7 @@
         </div>
 
         <h3>Bill Clinton</h3>
-        <p style = "padding-top: 20px">The following are example sentences from President Clinton’s 1995 State of the Union address. The nativist-labeled sentences indicate Clinton’s tough-on-crime stance and his equation of immigrants with forces driving up the national crime rate (“We are a nation of immigrants. But we are also a nation of laws.”) Predictably, then, much of his rhetoric seems aggressive and militant. He also makes references to the burden that undocumented immigrants place on social services.</p>
+        <p style = "padding-top: 20px">The following are example sentences from President Clinton’s 1995 State of the Union address. The nativist-labeled sentences indicate Clinton’s tough-on-crime stance and his equation of immigrants with forces driving up the national crime rate ("We are a nation of immigrants. But we are also a nation of laws.") Predictably, then, much of his rhetoric seems aggressive and militant. He also makes references to the burden that undocumented immigrants place on social services.</p>
         <p>It is important to note that the sentences are drawn from a State of the Union, so there is less material to analyze than other presidential speeches that focus solely on immigration. (Limited to online resources, we were unable to find such a speech for Clinton.)</p>
 
         <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
@@ -152,7 +152,7 @@
         </div>
 
         <h3>George H. W. Bush</h3>
-        <p style = "padding-top: 20px">The following are example sentences from President Bush’s “Statement on Signing the Immigration Act of 1990,” released on November 29, 1990. Bush separates undocumented immigrants in general from violent criminals, though he connects undocumented immigration with rising drug abuse. Most of his statement deals with opening avenues for legal immigration; the model mistakenly labeled some of these sentences as nativist.</p>
+        <p style = "padding-top: 20px">The following are example sentences from President Bush’s "Statement on Signing the Immigration Act of 1990," released on November 29, 1990. Bush separates undocumented immigrants in general from violent criminals, though he connects undocumented immigration with rising drug abuse. Most of his statement deals with opening avenues for legal immigration; the model mistakenly labeled some of these sentences as nativist.</p>
 
         <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
             <div class="col">
@@ -167,7 +167,7 @@
         </div>
 
         <h3>Ronald Reagan</h3>
-        <p style = "padding-top: 20px">The following are example sentences from President Reagan’s “Statement on United States Immigration and Refugee Policy,” released on July 30, 1981. Here, Reagan speaks about immigration in largely positive terms, frequently evoking the ideal of America as a nation of immigrants and noting that even undocumented immigrants play an integral role in society. The model picked up even less nativist content than it did in George H. W. Bush’s statement. Even the sentences that it did label as nativist are rather mild or even only debatably nativist—this is sporadically true for the presidents above but is especially apparent for Reagan.</p>
+        <p style = "padding-top: 20px">The following are example sentences from President Reagan’s "Statement on United States Immigration and Refugee Policy," released on July 30, 1981. Here, Reagan speaks about immigration in largely positive terms, frequently evoking the ideal of America as a nation of immigrants and noting that even undocumented immigrants play an integral role in society. The model picked up even less nativist content than it did in George H. W. Bush’s statement. Even the sentences that it did label as nativist are rather mild or even only debatably nativist—this is sporadically true for the presidents above but is especially apparent for Reagan.</p>
 
         <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
             <div class="col">
@@ -183,7 +183,7 @@
         </div>
 
         <h3>Jimmy Carter</h3>
-        <p style = "padding-top: 20px">The following are example sentences from President Carter’s “Undocumented Aliens Message To The Congress,” released on August 4, 1977. Carter’s results have a substantial amount of noise; for instance, one of the falsely labeled sentences shown below includes the phrase “control the employment of undocumented aliens,” which may have influenced the model’s prediction that the sentence is nativist, even though the sentence as a whole denounces racial discrimination. Because of noise like this, conclusions on Carter’s immigration rhetoric are a bit unclear, though we see a desire to impose law and order and prevent immigrant strain on social services.</p>
+        <p style = "padding-top: 20px">The following are example sentences from President Carter’s "Undocumented Aliens Message To The Congress," released on August 4, 1977. Carter’s results have a substantial amount of noise; for instance, one of the falsely labeled sentences shown below includes the phrase "control the employment of undocumented aliens," which may have influenced the model’s prediction that the sentence is nativist, even though the sentence as a whole denounces racial discrimination. Because of noise like this, conclusions on Carter’s immigration rhetoric are a bit unclear, though we see a desire to impose law and order and prevent immigrant strain on social services.</p>
 
         <div class="row no-gutters" style="padding-top:20px; padding-bottom:20px">
           <div class="col">
